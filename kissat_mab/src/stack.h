@@ -2,6 +2,7 @@
 #define _stack_h_INCLUDED
 
 #include <stdlib.h>
+#include "allocate.h"
 
 #define STACK(TYPE) \
   struct { TYPE * begin; TYPE * end; TYPE * allocated; }

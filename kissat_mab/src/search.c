@@ -2,6 +2,7 @@
 #include "decide.h"
 #include "eliminate.h"
 #include "internal.h"
+#include "learn.h"
 #include "ls.h"
 #include "logging.h"
 #include "print.h"

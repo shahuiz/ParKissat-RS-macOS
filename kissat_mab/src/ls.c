@@ -4,6 +4,7 @@
 #include "terminate.h"
 #include <time.h>
 
+
 bool kissat_ccanring (kissat *solver) {
     if (GET_OPTION(ccanr) && solver->freeze_ls_restart_num < 1) return true;
     return false;
