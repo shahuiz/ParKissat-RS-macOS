@@ -1,5 +1,5 @@
 # Paths
-LIBOMP_PATH = /opt/homebrew
+LIBOMP_ROOT := $(shell brew --prefix libomp)
 
 # Source and object files
 SRCS = $(shell find . -name "*.cpp")
@@ -10,8 +10,6 @@ EXEC = painless
 INCLUDES = -I. -I../kissat_mab
 DEFS = -D__STDC_LIMIT_MACROS -D__STDC_FORMAT_MACROS
 CXXFLAGS = $(INCLUDES) $(DEFS) -fopenmp -std=c++17 -O3 -D NDEBUG
-
-LIBOMP_ROOT = /opt/homebrew/opt/libomp
 
 LDFLAGS = -L../kissat_mab/build -lkissat -lpthread -lz -lm \
           -L$(LIBOMP_ROOT)/lib -lomp \

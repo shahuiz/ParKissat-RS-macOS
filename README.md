@@ -16,7 +16,7 @@ A forked version of the [ParKissat-RS SAT solver](https://github.com/shaowei-cai
 - Make sure you have installed **gcc-15** and **libomp**:
 
 ```bash
-brew install gcc libomp
+brew install gcc@15 libomp
 ```
 
 - Clone the repository
@@ -30,5 +30,7 @@ cd ParKissat-RS-macOS
 
 ```bash
 make clean
-make CXX_COMPILE=g++-15 CXX_LINK=g++-15
+export CC=gcc-15
+export CXX=g++-15
+make
 ```
